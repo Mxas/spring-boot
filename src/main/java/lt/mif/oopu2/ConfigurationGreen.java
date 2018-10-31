@@ -7,7 +7,7 @@ import lt.mif.oopu2.service.CarService;
 import lt.mif.oopu2.service.impl.CarServiceGreenImpl;
 import lt.mif.oopu2.service.impl.CarServiceRedImpl;
 
-@Configuration
+//@Configuration
 public class ConfigurationGreen {
 
 	@Bean
