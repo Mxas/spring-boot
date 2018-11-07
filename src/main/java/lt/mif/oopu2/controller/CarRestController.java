@@ -3,27 +3,19 @@ package lt.mif.oopu2.controller;
 import lt.mif.oopu2.demen.Car;
 import lt.mif.oopu2.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Map;
 
-@Controller
-public class CarController {
+@RestController
+public class CarRestController {
 
     @Autowired
     private CarService carService;
 
-    @GetMapping("/")
-    public String main(Model model) {
-
-        model.addAttribute("cars", getAll());
-        model.addAttribute("color", carGo());
-
-        return "index";
-    }
 
     @RequestMapping("/testas")
     public String testas() {
